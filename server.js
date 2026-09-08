@@ -16,7 +16,7 @@ let activeSocketId = null;
 let lastHeartbeat = 0;
 const LOCK_TIMEOUT = 15000;
 
-app.use(express.static(path.join(__dirname, "public")));
+app.use(express.static(__dirname));
 
 function isLocked() {
   if (!activeSocketId) return false;
