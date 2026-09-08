@@ -1,0 +1,15 @@
+
+{
+  "name": "white-page-church-quiz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "صفحة بيضاء - كنسي one-user-at-a-time quiz website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  }
+}
