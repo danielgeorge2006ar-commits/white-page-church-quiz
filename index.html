@@ -1,0 +1,76 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>صفحة بيضاء | سؤال الكنز</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="paper-noise"></div>
+  <div class="cross cross-top">✝</div>
+  <div class="cross cross-side">✝</div>
+
+  <main id="app">
+    <section id="loading" class="screen active">
+      <div class="spinner"></div>
+      <p>لحظة صغيرة...</p>
+    </section>
+
+    <section id="denied" class="screen">
+      <div class="icon lock">🔒</div>
+      <div class="eyebrow">صفحة بيضاء</div>
+      <h1>الموقع مستخدم حاليًا</h1>
+      <p>هناك شخص آخر يستخدم الموقع الآن.<br>يرجى الانتظار، وسيتم فتح الصفحة لك تلقائيًا.</p>
+      <div class="divider"></div>
+      <div class="soft-note">♡ كل شيء يأتي في وقته المناسب ♡</div>
+      <div class="waiting"><span></span> في انتظار دورك...</div>
+    </section>
+
+    <section id="quiz" class="screen">
+      <div class="eyebrow">صفحة بيضاء</div>
+      <div class="mini-cross">✝</div>
+      <h1>بداية جديدة</h1>
+      <p class="subtitle">اختبر معلوماتك وشوف هتقدر تكتشف الكنز ولا لأ 🤍</p>
+
+      <div class="question-card">
+        <div class="question-number">السؤال الأول</div>
+        <h2>مين هو صاحب شخصية الكنز؟</h2>
+
+        <div class="choices">
+          <button class="choice" data-answer="أ. موسى"><span>أ.</span> موسى</button>
+          <button class="choice" data-answer="ب. دانيال"><span>ب.</span> دانيال</button>
+          <button class="choice" data-answer="ج. داود"><span>ج.</span> داود</button>
+          <button class="choice" data-answer="د. إيليا"><span>د.</span> إيليا</button>
+        </div>
+
+        <div id="result" class="result"></div>
+      </div>
+
+      <div class="verse">
+        <div class="verse-mark">“</div>
+        <p>«إذًا إن كان أحد في المسيح فهو خليقة جديدة»</p>
+        <small>٢ كورنثوس ٥: ١٧</small>
+      </div>
+
+      <button id="finish" class="finish" hidden>إنهاء ♡</button>
+    </section>
+
+    <section id="done" class="screen">
+      <div class="icon heart">♡</div>
+      <div class="eyebrow">صفحة بيضاء</div>
+      <h1>شكرًا ليك 🤍</h1>
+      <p>إجابتك اتسجلت بنجاح.<br>مستنيينك في الخطوة الجاية!</p>
+      <div class="divider"></div>
+      <div class="soft-note">God's timing is always perfect</div>
+    </section>
+  </main>
+
+  <script src="/socket.io/socket.io.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>
